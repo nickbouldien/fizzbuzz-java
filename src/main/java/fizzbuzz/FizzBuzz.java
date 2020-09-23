@@ -10,14 +10,13 @@ import java.util.HashMap;
 
 public class FizzBuzz {
     public static void main(String[] args) {
+        FizzBuzz fb = new FizzBuzz();
         int num = 20;
-
-        run(num);
+        fb.run(num);
     }
 
-    private static void run(int num) {
+    public HashMap<String, Integer> run(int num) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
-
         result.put("lucky", 0);
         result.put("fizzbuzz", 0);
         result.put("fizz", 0);
@@ -52,6 +51,8 @@ public class FizzBuzz {
         result.entrySet().forEach(entry -> {
            System.out.println(entry.getKey() + ": " + entry.getValue());
         });
+
+        return result;
     }
 
     public static boolean hasDigit(int digit, int number) {

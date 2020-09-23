@@ -2,3 +2,9 @@
 .project
 .settings/
 target/
+fizzbuzztest.iml
+dependency-reduced-pom.xml
+
+# ide settings/config
+.vscode
+.idea

@@ -17,7 +17,7 @@ public class FizzBuzzTest {
         expectedResult.put("buzz", 0);
         expectedResult.put("integer", 2);
 
-        HashMap<String, Integer> res = fizzbuzz.run(2);
+        HashMap<String, Integer> res = fizzbuzz.run(2, 3);
 
         assertEquals(res.get("lucky"), expectedResult.get("lucky"));
         assertEquals(res.get("fizzbuzz"), expectedResult.get("fizzbuzz"));
@@ -35,7 +35,7 @@ public class FizzBuzzTest {
         expectedResult.put("buzz", 3);
         expectedResult.put("integer", 10);
 
-        HashMap<String, Integer> res = fizzbuzz.run(20);
+        HashMap<String, Integer> res = fizzbuzz.run(20, 3);
 
         assertEquals(res.get("lucky"), expectedResult.get("lucky"));
         assertEquals(res.get("fizzbuzz"), expectedResult.get("fizzbuzz"));

@@ -12,10 +12,12 @@ public class FizzBuzz {
     public static void main(String[] args) {
         FizzBuzz fb = new FizzBuzz();
         int num = 20;
-        fb.run(num);
+        int specialDigit = 3;
+
+        fb.run(num, specialDigit);
     }
 
-    public HashMap<String, Integer> run(int num) {
+    public HashMap<String, Integer> run(int num, int specialDigit) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
         result.put("lucky", 0);
         result.put("fizzbuzz", 0);
@@ -24,12 +26,12 @@ public class FizzBuzz {
         result.put("integer", 0);
 
         for (int i = 1; i <= num; i++) {
-            if (hasDigit(3, i)) {
+            if (hasDigit(specialDigit, i)) {
                 result.put("lucky", result.get("lucky") + 1);
                 System.out.println("lucky");
             } else {
                 if (i % 15 == 0) {
-                    // multiple of 5 && 7
+                    // multiple of 5 && 3
                     result.put("fizzbuzz", result.get("fizzbuzz") + 1);
                     System.out.println("fizzbuzz");
                 } else if (i % 3 == 0) {
